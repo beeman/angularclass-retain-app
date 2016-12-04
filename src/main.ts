@@ -4,7 +4,7 @@ import { HttpModule } from '@angular/http'
 import { BrowserModule } from '@angular/platform-browser'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 
-import { App } from './app/'
+import { App, providers } from './app/'
 import { Main, NotesContainer } from './app/containers'
 import { AppBar, ColorPicker, NoteCard, NoteCreator } from './app/ui'
 
@@ -25,7 +25,8 @@ import { AppBar, ColorPicker, NoteCard, NoteCreator } from './app/ui'
   ],
   bootstrap: [
     App,
-  ]
+  ],
+  providers: [ ...providers ],
 })
 
 export class AppModule {
