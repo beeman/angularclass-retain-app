@@ -36,7 +36,7 @@ export class ApiService {
   get(path: string): Observable<any> {
     return this.http
       .get(
-        `${this.apiUrl}/${path}`,
+        `${this.apiUrl}${path}`,
         { headers: this.headers },
       )
       .map(this.checkForError)
@@ -47,7 +47,7 @@ export class ApiService {
   post(path: string, body: any): Observable<any> {
     return this.http
       .post(
-        `${this.apiUrl}/${path}`,
+        `${this.apiUrl}${path}`,
         JSON.stringify(body),
         { headers: this.headers },
       )
@@ -59,7 +59,7 @@ export class ApiService {
   delete(path: string): Observable<any> {
     return this.http
       .delete(
-        `${this.apiUrl}/${path}`,
+        `${this.apiUrl}${path}`,
         { headers: this.headers },
       )
       .map(this.checkForError)
