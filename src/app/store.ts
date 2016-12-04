@@ -12,13 +12,18 @@ export interface Note {
   updatedAt?: string
   userId?: string
 }
+export interface User {
+  id?: string
+}
 
 export interface State {
-  notes: Note[]
+  notes: Note[],
+  user: User
 }
 
 const defaultState: State = {
-  notes: []
+  notes: [],
+  user: {}
 }
 
 const _store = new BehaviorSubject<State>(defaultState)
