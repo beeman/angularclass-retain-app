@@ -49,7 +49,7 @@ import { AuthService } from '../services'
   ` ],
   template: `
     <div class="auth row center-xs middle-xs">
-      <form class="col-xs-6 shadow-2" #authForm="ngForm" (submit)="authenticate()">
+      <form class="col-xs-6 shadow-2" (ngSubmit)="authenticate()" #authForm="ngForm">
         <div class="inputs row center-xs middle-xs">
           <h3 class="col-xs-8 title">
             {{mode}}
