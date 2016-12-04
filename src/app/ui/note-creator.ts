@@ -25,6 +25,7 @@ import { Component, Output, EventEmitter } from '@angular/core'
         name="newNoteTitle"
         placeholder="Title"
         class="col-xs-10 title"
+        autocomplete="off"
         *ngIf="fullForm"
       >
       <input
@@ -34,6 +35,7 @@ import { Component, Output, EventEmitter } from '@angular/core'
         name="newNoteValue"
         placeholder="Take a note..."
         class="col-xs-10"
+        autocomplete="off"
       >
       <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
       
