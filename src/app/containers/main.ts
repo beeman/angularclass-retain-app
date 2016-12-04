@@ -6,7 +6,7 @@ import { Component } from '@angular/core'
     <div class="main-container">
       <app-bar></app-bar>
       <main>
-        <notes-container></notes-container>
+        <router-outlet></router-outlet>
       </main>
     </div>
 `
